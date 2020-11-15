@@ -1,0 +1,153 @@
+.game {
+  background-color: #1e243a;
+}
+
+.app__body {
+  background-color: #252a42;
+  border-radius: 5px;
+  padding: 0 20px;
+}
+
+.app__chart-img {
+  max-width: 900px;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.app__game-input {
+  background-color: #252a42;
+  max-width: 160px;
+  color: #fff;
+  width: 100%;
+  border: 1px solid #3f455d;
+  border-radius: 3px;
+}
+
+.high-button {
+  margin-left: 20px;
+}
+.app__game-input {
+  margin: 10px 15px;
+}
+.app__body input {
+  outline: none;
+  border: none;
+  font-size: 1.2em;
+  padding: 4px 0;
+  text-align: center;
+}
+
+.expected_payout-high {
+  background-color: #252a42;
+  padding: 5px 35px;
+  display: inline-block;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  border: 1px solid #00c58c;
+}
+
+.best__price-title,
+.time-left-title {
+  font-size: 12px;
+  color: #cbd1e6;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.app__game-time {
+  color: #cbd1e6;
+  font-size: 14px;
+  margin: 0 5px;
+}
+.expected__payout-title {
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+
+.place-bet {
+  color: #fed248;
+  border: 1px solid #fed248;
+  display: inline-block;
+  filter: drop-shadow(0px 0px 10px rgba(255, 188, 15, 0.35));
+  border-radius: 3px;
+  padding: 24px 38px;
+  background-color: #343a55;
+  text-transform: uppercase;
+  margin: 10px 30px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.place-bet:hover {
+  background-color: #fed248;
+  color: #343a55;
+}
+.expected_payout-low {
+  background-color: #252a42;
+  padding: 5px 35px;
+  display: inline-block;
+  border: 1px solid #ff2d4d;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.app__game {
+  background-color: #343a55;
+}
+
+.top-items {
+  margin: 10px 0;
+}
+
+.top-items,
+.bottom-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app__game-date {
+  display: flex;
+  align-items: center;
+}
+
+.app__game-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h5 {
+  margin: 0;
+}
+
+.items-center-bottom {
+  display: flex;
+  margin: 10px 74px 10px 0;
+  align-items: flex-end;
+}
+
+.app__game-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app__body-title {
+  text-align: center;
+  font-size: 16px;
+  padding: 15px 0;
+}
+.place-bet {
+  margin: 0 10px;
+}
+
+.center-items {
+  margin: 10px;
+}

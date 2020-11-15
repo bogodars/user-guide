@@ -1,0 +1,25 @@
+.chat__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.online {
+  align-items: center;
+  display: flex;
+}
+
+.lang,
+.left-icon {
+  display: flex;
+  align-items: center;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+.lang {
+  margin-right: 10px;
+}

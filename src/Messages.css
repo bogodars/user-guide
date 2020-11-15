@@ -1,0 +1,67 @@
+.mesagge__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.message {
+  max-width: 410px;
+  background-color: #2e3451;
+  color: #fff;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.replay__icon,
+.replay__text {
+  display: none;
+  cursor: pointer;
+}
+
+.message:hover {
+  background-color: #3f445c;
+  transition: 0.5s;
+}
+
+#message:hover #replay__icon {
+  display: block;
+}
+
+#message:hover #replay__text {
+  display: block;
+}
+
+#message:hover #like {
+  color: #868999;
+}
+
+.time,
+.like {
+  color: #53576c;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.message__header-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0 15px;
+}
+
+.message__header-right {
+  display: flex;
+  align-items: center;
+}
+
+.message__text {
+  padding: 15px;
+}
+
+.replay__text {
+  margin: 0 10px 0 5px;
+}

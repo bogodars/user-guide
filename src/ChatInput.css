@@ -1,0 +1,44 @@
+.message__input {
+  background-color: #26273c;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+.message__input::placeholder {
+  color: #cbd1e5;
+}
+
+.smile {
+  position: absolute;
+  right: 0;
+  top: 35%;
+  margin-right: 80px;
+}
+
+.chat__input-form {
+  position: relative;
+  width: 100%;
+  display: flex;
+  color: #fff;
+}
+
+.chat__input {
+  max-width: 580px;
+  color: #fff;
+}
+
+.chat__input input {
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+.chat__input-button {
+  background-color: #36b570;
+  padding: 15px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

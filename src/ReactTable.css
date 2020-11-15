@@ -1,0 +1,35 @@
+.row-table:nth-of-type(odd) {
+  background: #343a55;
+}
+
+.row-table {
+  color: #fff;
+  background: #2b3049;
+  padding: 16px;
+}
+
+thead {
+  color: #fff;
+  background: #2b3049;
+}
+.th {
+  padding: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #cbd1e6;
+}
+
+table {
+  border: none;
+  border-spacing: unset;
+  max-width: 260px;
+  height: 300px;
+}
+
+td {
+  border: none;
+  padding: 10px;
+}
