@@ -41,8 +41,20 @@
   color: #53576c;
   font-size: 12px;
   line-height: 16px;
+  cursor: pointer;
 }
 
+.replay__icon,
+.like {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.replay__icon,
+.replay__text {
+  color: #868999;
+}
 .message__header-left {
   display: flex;
   align-items: center;

@@ -29,15 +29,13 @@ Here you can observe BTC/USDT price movements in real-time. Use charts to correc
   // ...
 ];
 
-const App = () => {
-  const [isTourOpen, isOpen, setIsTourOpen] = useState(false);
+const UserGuide = () => {
+  const [isTourOpen, setIsTourOpen] = useState(true);
 
   return (
     <>
       {/* other stuff */}
       <Tour
-        steps={steps}
-        isOpen={isOpen}
         steps={steps}
         isOpen={isTourOpen}
         onRequestClose={() => setIsTourOpen(false)}
@@ -45,3 +43,5 @@ const App = () => {
     </>
   );
 };
+
+export default UserGuide;

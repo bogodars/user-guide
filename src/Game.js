@@ -6,7 +6,7 @@ import QueryBuilderIcon from '@material-ui/icons/QueryBuilder';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import './Game.css';
 
-export default function Game(openTour) {
+export default function Game() {
   const [num, setNum] = useState(0.0002);
   return (
     <div className='game'>
@@ -17,7 +17,7 @@ export default function Game(openTour) {
           className='app__chart-img'
           data-tut='currency-type'
         />
-        <button onClick={openTour}>Try it</button>
+
         <div className='app__body'>
           <h3 className='app__body-title'>
             At 12:35, will the Bitcoin price be higher or lower than Base price?
