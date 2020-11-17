@@ -2,7 +2,7 @@
 
 One implementing with [Reactour library](https://reactour.js.org/), still not happy with my way of implementing changes, guess there is more correct way.
 
-Second [JoyRide](https://react-joyride.com/), musch less customizeble.
+Second [JoyRide](https://react-joyride.com/), much less customizable but simple.
 
 ## Bags
 
