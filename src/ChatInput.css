@@ -5,6 +5,7 @@
   padding: 10px;
   width: 100%;
 }
+
 .message__input::placeholder {
   color: #cbd1e5;
 }

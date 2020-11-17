@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const styles = `
+const stylesDefault = `
     border-radius: 3px;
     color: white;
     border: 1px solid #00C58C;
@@ -26,8 +26,29 @@ const stylesBet = `
     }
 `;
 
+const stylesButtonHelper = `
+padding: 10px 18px;
+border-radius: 4px;
+color:  #1E243A;
+border: none;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+text-transform: uppercase;
+`;
+
+const ButtonHelper = styled.button`
+  ${stylesButtonHelper};
+`;
+
 const Button = styled.button`
-  ${styles};
+  ${stylesDefault};
+`;
+
+const StyledButtonHelper = styled(ButtonHelper)`
+  background-color: ${({ prev }) => (prev ? '#CBD1E6' : '#FED248')};
 `;
 
 const StyledButton = styled(Button)`
@@ -37,9 +58,15 @@ const StyledButton = styled(Button)`
 const ButtonBet = styled.button`
   ${stylesBet}
 `;
+
 const StyledButtonBet = styled(ButtonBet)`
   background-color: ${({ high }) => (high ? '#00C58C' : 'transparent')};
   color: ${({ high }) => (high ? '#fff' : '#FF2D4D')};
   border-color: ${({ high }) => (high ? '#00C58C' : '#FF2D4D')};
 `;
-export { StyledButton as Button, StyledButtonBet as ButtonBet };
+
+export {
+  StyledButton as Button,
+  StyledButtonBet as ButtonBet,
+  StyledButtonHelper as ButtonHelper,
+};

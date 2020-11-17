@@ -1,0 +1,63 @@
+.helper {
+  border: none;
+  position: relative;
+}
+
+[data-tour='currency-type']:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -50px;
+  width: 0;
+  height: 0;
+  border-top: solid 50px #e15915;
+  border-left: solid 50px transparent;
+  border-right: solid 50px transparent;
+}
+
+.helper:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -50px;
+  width: 0;
+  height: 0;
+  border-top: solid 50px #e15915;
+  border-left: solid 50px transparent;
+  border-right: solid 50px transparent;
+}
+
+.content-title {
+  margin-top: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #f1f3ff;
+}
+
+.content-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #f1f3ff;
+}
+
+.prev-button {
+  text-transform: uppercase;
+}
+
+[data-tour-elem='left-arrow'] {
+  position: absolute;
+  right: 70px;
+  bottom: 14px;
+}
+
+[data-tour-elem='right-arrow'] {
+  position: absolute;
+  right: 10px;
+  bottom: 14px;
+}

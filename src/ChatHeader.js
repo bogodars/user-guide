@@ -6,6 +6,7 @@ import { green } from '@material-ui/core/colors';
 import { BiChevronDown } from 'react-icons/bi';
 
 import './ChatHeader.css';
+
 const ChatHeader = () => {
   return (
     <>

@@ -2,8 +2,10 @@ import React from 'react';
 import Messages from './Messages';
 import ChatHeader from './ChatHeader';
 import ChatInput from './ChatInput';
-import './Chat.css';
 import { Scrollbars } from 'react-custom-scrollbars';
+
+import './Chat.css';
+
 function Chat() {
   return (
     <div className='chat'>

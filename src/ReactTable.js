@@ -2,6 +2,7 @@ import React from 'react';
 import { useTable } from 'react-table';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 import TrendingDownIcon from '@material-ui/icons/TrendingDown';
+
 import './ReactTable.css';
 
 export default function App() {
@@ -55,35 +56,24 @@ export default function App() {
     []
   );
 
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow,
-  } = useTable({ columns, data });
+  const { getTableProps, getTableBodyProps, rows, prepareRow } = useTable({
+    columns,
+    data,
+  });
 
   return (
     <table {...getTableProps()} style={{}}>
-      {/* <thead>
-        {headerGroups.map((headerGroup) => (
-          <tr {...headerGroup.getHeaderGroupProps()}>
-            {headerGroup.headers.map((column) => (
-              <th className='th' {...column.getHeaderProps()}>
-                {column.render('Header')}
-              </th>
-            ))}
-          </tr>
-        ))}
-      </thead> */}
-
       <tbody {...getTableBodyProps()}>
-        {rows.map((row) => {
+        {rows.map((row, key) => {
           prepareRow(row);
           return (
-            <tr className='row-table' {...row.getRowProps()}>
-              {row.cells.map((cell) => {
-                return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>;
+            <tr className='row-table' key={key} {...row.getRowProps()}>
+              {row.cells.map((cell, key) => {
+                return (
+                  <td key={key} {...cell.getCellProps()}>
+                    {cell.render('Cell')}
+                  </td>
+                );
               })}
             </tr>
           );

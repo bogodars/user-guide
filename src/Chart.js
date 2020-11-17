@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactTable from './ReactTable';
 import { Scrollbars } from 'react-custom-scrollbars';
+
 import './Chart.css';
+
 function Chart() {
   return (
-    <div className='chart'>
+    <div data-tour='other-bet' className='chart'>
       <div className='column'>
         <div className='table-title'>
           <h5>

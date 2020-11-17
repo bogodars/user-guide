@@ -1,7 +1,9 @@
 import React from 'react';
 import { BiSmile } from 'react-icons/bi';
 import SendIcon from '@material-ui/icons/Send';
+
 import './ChatInput.css';
+
 function ChatInput() {
   return (
     <div>

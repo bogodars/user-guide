@@ -2,7 +2,7 @@ import React from 'react';
 import './Messages.css';
 import { messageInfo } from './messageData';
 
-const Message = () => {
+const Messages = () => {
   return (
     <>
       {messageInfo.map((index, key) => (
@@ -32,4 +32,4 @@ const Message = () => {
   );
 };
 
-export default Message;
+export default Messages;
