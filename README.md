@@ -6,14 +6,14 @@ Second [JoyRide](https://react-joyride.com/), musch less customizeble.
 
 ## Bags
 
-After starting User gide first step is not masking full picture, after clicking next and thn previous everything works fine.
+After starting User gide first step is not masking full picture, after clicking next and then previous buttons everything works fine.
 
 ## Errors
 
 1. First start
 
 After starting developing server getting this
-![Start error](https://ibb.co/NsNwdC1)
+![Start error]([url=https://ibb.co/NsNwdC1][img]https://i.ibb.co/zr2KTx8/pic.png[/img][/url])
 
 Saving any file just after even without changes make compile successful.
 
