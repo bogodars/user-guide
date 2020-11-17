@@ -10,8 +10,17 @@ After starting User gide first step is not masking full picture, after clicking 
 
 ## Errors
 
-Two errors in console.
+1. First start
+
+After starting developing server getting this
+![Start error](https://ibb.co/NsNwdC1)
+
+Saving any file just after even without changes make compile successful.
+
+2. Two errors in console.
 
 First i assume is tables map function.
 
 Second something wrong with styled component button.
+
+Need time to fix it.

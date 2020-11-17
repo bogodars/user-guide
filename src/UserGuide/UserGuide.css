@@ -1,32 +1,5 @@
 .helper {
   border: none;
-  position: relative;
-}
-
-[data-tour='currency-type']:after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -50px;
-  width: 0;
-  height: 0;
-  border-top: solid 50px #e15915;
-  border-left: solid 50px transparent;
-  border-right: solid 50px transparent;
-}
-
-.helper:after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -50px;
-  width: 0;
-  height: 0;
-  border-top: solid 50px #e15915;
-  border-left: solid 50px transparent;
-  border-right: solid 50px transparent;
 }
 
 .content-title {
