@@ -1,8 +1,6 @@
-# Website with user-guide frameworks
+# Website with user-guide framework
 
-One implementing with [Reactour library](https://reactour.js.org/), still not happy with my way of implementing changes, guess there is more correct way.
-
-Second [JoyRide](https://react-joyride.com/), much less customizable but simple.
+Implementing with [Reactour library](https://reactour.js.org/)
 
 ## Bags
 
@@ -17,10 +15,8 @@ After starting developing server getting this
 
 Saving any file just after even without changes make compile successful.
 
-2. Two errors in console.
+2. error the in console.
 
-First i assume is tables map function.
-
-Second something wrong with styled component button.
+I assume that is tables map function or scroll.
 
 Need time to fix it.
