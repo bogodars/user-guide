@@ -21,8 +21,7 @@ const stylesBet = `
     outline: none;
     padding: 8px 33px;
     cursor: pointer;
-     transition: 0.5s ease;
-
+    transition: 0.5s ease;
     }
 `;
 
@@ -56,7 +55,7 @@ const StyledButton = styled(Button)`
 `;
 
 const ButtonBet = styled.button`
-  ${stylesBet}
+  ${stylesBet};
 `;
 
 const StyledButtonBet = styled(ButtonBet)`
@@ -65,8 +64,6 @@ const StyledButtonBet = styled(ButtonBet)`
   border-color: ${({ high }) => (high ? '#00C58C' : '#FF2D4D')};
 `;
 
-export {
-  StyledButton as Button,
-  StyledButtonBet as ButtonBet,
-  StyledButtonHelper as ButtonHelper,
-};
+export { StyledButton as Button };
+export { StyledButtonBet as ButtonBet };
+export { StyledButtonHelper as ButtonHelper };

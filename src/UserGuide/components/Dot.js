@@ -4,7 +4,8 @@ const Dot = styled.button`
   counter-increment: dot;
   width: 8px;
   height: 8px;
-  border: ${(props) => (props.current === props.index ? '0' : 'none')};
+  border: ${(props) =>
+    props.current === props.index ? '0' : '1px solid #caccce'};
 
   border-radius: 100%;
   padding: 0;
@@ -22,7 +23,7 @@ const Dot = styled.button`
   color: ${(props) =>
     props.current === props.index ? props.accentColor : '#caccce'};
   background: ${(props) =>
-    props.current === props.index ? props.accentColor : '#53576C'};
+    props.current === props.index ? props.accentColor : 'none'};
 
   &:before {
     content: counter(dot);

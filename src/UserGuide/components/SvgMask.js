@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import * as hx from '../helpers'
-import PropTypes from 'prop-types'
+import React from 'react';
+import styled from 'styled-components';
+import * as hx from '../helpers';
+import PropTypes from 'prop-types';
 
 const SvgMaskWrapper = styled.div`
   opacity: 0.7;
@@ -13,7 +13,7 @@ const SvgMaskWrapper = styled.div`
   z-index: 99999;
   pointer-events: none;
   color: #000;
-`
+`;
 
 export default function SvgMask({
   windowWidth,
@@ -29,42 +29,41 @@ export default function SvgMask({
   className,
   onClick,
 }) {
-  const width = hx.safe(targetWidth + padding * 2)
-  const height = hx.safe(targetHeight + padding * 2)
-  const top = hx.safe(targetTop - padding)
-  const left = hx.safe(targetLeft - padding)
+  const width = hx.safe(targetWidth + padding * 2);
+  const height = hx.safe(targetHeight + padding * 2);
+  const top = hx.safe(targetTop - padding);
+  const left = hx.safe(targetLeft - padding);
 
   return (
     <SvgMaskWrapper onClick={onClick}>
       <svg
         width={windowWidth}
         height={windowHeight}
-        xmlns="http://www.w3.org/2000/svg"
-        className={className}
-      >
+        xmlns='http://www.w3.org/2000/svg'
+        className={className}>
         <defs>
-          <mask id="mask-main">
+          <mask id='mask-main'>
             <rect
               x={0}
               y={0}
               width={windowWidth}
               height={windowHeight}
-              fill="white"
+              fill='white'
             />
-            <rect x={left} y={top} width={width} height={height} fill="black" />
+            <rect x={left} y={top} width={width} height={height} fill='black' />
             {/* top left rounded corner */}
             <rect
               x={left - 1}
               y={top - 1}
               width={rounded}
               height={rounded}
-              fill="white"
+              fill='white'
             />
             <circle
               cx={left + rounded}
               cy={top + rounded}
               r={rounded}
-              fill="black"
+              fill='black'
             />
             {/* top right rounded corner */}
             <rect
@@ -72,13 +71,13 @@ export default function SvgMask({
               y={top - 1}
               width={rounded}
               height={rounded}
-              fill="white"
+              fill='white'
             />
             <circle
               cx={left + width - rounded}
               cy={top + rounded}
               r={rounded}
-              fill="black"
+              fill='black'
             />
             {/* bottom left rounded corner */}
             <rect
@@ -86,13 +85,13 @@ export default function SvgMask({
               y={top + height - rounded + 1}
               width={rounded}
               height={rounded}
-              fill="white"
+              fill='white'
             />
             <circle
               cx={left + rounded}
               cy={top + height - rounded}
               r={rounded}
-              fill="black"
+              fill='black'
             />
             {/* bottom right rounded corner */}
             <rect
@@ -100,16 +99,16 @@ export default function SvgMask({
               y={top + height - rounded + 1}
               width={rounded}
               height={rounded}
-              fill="white"
+              fill='white'
             />
             <circle
               cx={left + width - rounded}
               cy={top + height - rounded}
               r={rounded}
-              fill="black "
+              fill='black '
             />
           </mask>
-          <clipPath id="clip-path">
+          <clipPath id='clip-path'>
             {/* top */}
             <rect x={0} y={0} width={windowWidth} height={top} />
             {/* left */}
@@ -135,31 +134,31 @@ export default function SvgMask({
           y={0}
           width={windowWidth}
           height={windowHeight}
-          fill="currentColor"
-          mask="url(#mask-main)"
+          fill='currentColor'
+          mask='url(#mask-main)'
         />
         <rect
           x={0}
           y={0}
           width={windowWidth}
           height={windowHeight}
-          fill="currentColor"
-          clipPath="url(#clip-path)"
-          pointerEvents="auto"
+          fill='currentColor'
+          clipPath='url(#clip-path)'
+          pointerEvents='auto'
         />
         <rect
           x={left}
           y={top}
           width={width}
           height={height}
-          pointerEvents="auto"
-          fill="transparent"
+          pointerEvents='auto'
+          fill='transparent'
           display={disableInteraction ? 'block' : 'none'}
           className={disableInteractionClassName}
         />
       </svg>
     </SvgMaskWrapper>
-  )
+  );
 }
 
 SvgMask.propTypes = {
@@ -173,4 +172,4 @@ SvgMask.propTypes = {
   rounded: PropTypes.number.isRequired,
   disableInteraction: PropTypes.bool.isRequired,
   disableInteractionClassName: PropTypes.string.isRequired,
-}
+};

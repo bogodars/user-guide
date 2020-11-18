@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import SvgButton from './SvgButton';
 import PropTypes from 'prop-types';
-// import { ButtonHelper } from '../../components/Button';
 
 function Close({ className, onClick, ariaLabel }) {
   return (

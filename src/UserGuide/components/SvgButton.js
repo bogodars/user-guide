@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export default styled.button`
   display: block;
@@ -6,5 +6,5 @@ export default styled.button`
   border: 0;
   background: none;
   font-size: 0;
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
-`
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+`;

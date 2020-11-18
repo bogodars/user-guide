@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 export const propTypes = {
   accessibilityOptions: PropTypes.shape({
@@ -62,7 +62,7 @@ export const propTypes = {
   ]),
   rounded: PropTypes.number,
   accentColor: PropTypes.string,
-}
+};
 
 export const defaultProps = {
   accessibilityOptions: {
@@ -82,4 +82,4 @@ export const defaultProps = {
   rounded: 0,
   accentColor: '#007aff',
   closeWithMask: true,
-}
+};

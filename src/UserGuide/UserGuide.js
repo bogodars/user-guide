@@ -1,47 +1,127 @@
 import React, { useState } from 'react';
-import Tour from './index';
+import Tour, { Navigation, Dot, Controls, Close } from './index';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { ButtonHelper } from '../components/Button';
+import { GlobalStyle } from './style';
 
 import './UserGuide.css';
+
+const UserGuide = () => {
+  const [isTourOpen, setIsTourOpen] = useState(true);
+
+  const disableBody = (target) => disableBodyScroll(target);
+  const enableBody = (target) => enableBodyScroll(target);
+  const accentColor = ' #00C58C';
+
+  return (
+    <>
+      <GlobalStyle />
+      <Tour
+        onAfterOpen={disableBody}
+        onBeforeClose={enableBody}
+        showNavigationNumber={false}
+        rounded={5}
+        steps={steps}
+        isOpen={isTourOpen}
+        onRequestClose={() => setIsTourOpen(false)}
+        showNumber={false}
+        closeWithMask={false}
+        className='helper'
+        accentColor={accentColor}
+        CustomHelper={MyCustomHelper}
+      />
+    </>
+  );
+};
+
+function MyCustomHelper({ current, content, totalSteps, gotoStep, close }) {
+  return (
+    <main className='CustomHelper__wrapper'>
+      <div className='CustomHelper__content'>
+        {content}
+        <Controls
+          data-tour-elem='controls'
+          className='CustomHelper__controls'
+          style={{
+            marginBottom: '40px',
+            marginTop: '20px ',
+            display: 'unset',
+          }}>
+          <ButtonHelper
+            className='prev-button'
+            prev='true'
+            onClick={() => gotoStep(current - 1)}
+            disabled={current === 0}>
+            Prev
+          </ButtonHelper>
+          <Navigation
+            data-tour-elem='navigation'
+            className='navigation'
+            style={{
+              justifyContent: 'unset',
+            }}>
+            {Array.from(Array(totalSteps).keys()).map((li, i) => (
+              <Dot
+                key={li}
+                onClick={() => current !== i && gotoStep(i)}
+                current={current}
+                index={i}
+                disabled={current === i}
+                showNumber={true}
+                data-tour-elem='dot'
+              />
+            ))}
+          </Navigation>
+          <ButtonHelper
+            onClick={() => gotoStep(current + 1)}
+            disabled={current === totalSteps - 1}
+            className='next-button'
+            inverted>
+            Next
+          </ButtonHelper>
+        </Controls>
+        <Close onClick={close} className='reactour__close'>
+          Skip
+        </Close>
+      </div>
+    </main>
+  );
+}
 
 const steps = [
   {
     selector: '[data-tour="currency-type"]',
-    content: (
-      <div>
-        <h3 className='content-title'>currency chart</h3>
-        <p className='content-text'>
-          Welcome to Betller! Here you can observe BTC/USDT price movements in
-          real-time. Use charts to correctly predict the direction of the
-          Bitcoin price
-        </p>
-      </div>
-    ),
-    position: [1000, 490],
-    style: {
-      color: '#53576C',
-      backgroundColor: '#252A42',
-      minWidth: '400px',
-      height: '255px',
+    content: function DemoHelperComponent() {
+      return (
+        <div className='currency-body'>
+          <h3 className='content-title'>currency chart</h3>
+          <p className='content-text'>
+            Welcome to Betller!
+            <br />
+            Here you can observe BTC/USDT price movements in real-time. Use
+            charts to correctly predict the direction of the Bitcoin price
+          </p>
+        </div>
+      );
     },
+    position: [1000, 490],
+    style: {},
   },
   {
     selector: '[data-tour="time-zone"]',
-    content: (
-      <div>
-        <h3 className='content-title'>time zone</h3>
-        <p className='content-text'>
-          Select your time zone here. It is important that you have your
-          timezone correctly!
-        </p>
-      </div>
-    ),
-    style: {
-      color: '#F1F3FF',
-      backgroundColor: '#252A42',
+    content: function DemoHelperComponent() {
+      return (
+        <div className='body-time-zone'>
+          <h3 className='content-title'>time zone</h3>
+          <p className='content-text'>
+            Select your time zone here. It is important that you have your
+            timezone correctly!
+          </p>
+        </div>
+      );
     },
-    position: `left`,
+    position: [800, 455],
+    style: {},
   },
   {
     selector: '[data-tour="end-time"]',
@@ -171,36 +251,5 @@ const steps = [
     position: `top`,
   },
 ];
-
-const UserGuide = () => {
-  const [isTourOpen, setIsTourOpen] = useState(true);
-
-  const disableBody = (target) => disableBodyScroll(target);
-  const enableBody = (target) => enableBodyScroll(target);
-  const accentColor = ' #00C58C';
-  return (
-    <>
-      <Tour
-        onAfterOpen={disableBody}
-        onBeforeClose={enableBody}
-        prevButton={
-          <ButtonHelper className='prev-button' prev='true'>
-            Prev
-          </ButtonHelper>
-        }
-        nextButton={<ButtonHelper>Next</ButtonHelper>}
-        rounded={5}
-        steps={steps}
-        isOpen={isTourOpen}
-        onRequestClose={() => setIsTourOpen(false)}
-        showNumber={false}
-        closeWithMask={true}
-        className='helper'
-        accentColor={accentColor}
-        showNavigationNumber={false}
-      />
-    </>
-  );
-};
 
 export default UserGuide;
