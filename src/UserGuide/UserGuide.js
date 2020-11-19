@@ -1,92 +1,32 @@
 import React, { useState } from 'react';
-import Tour, { Navigation, Dot, Controls, Close } from './index';
+import Tour from 'reactour';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
-import { ButtonHelper } from '../components/Button';
-import { GlobalStyle } from './style';
 
 import './UserGuide.css';
 
 const UserGuide = () => {
-  const [isTourOpen, setIsTourOpen] = useState(true);
-
+  const [isTourOpen, setOpen] = useState(true);
   const disableBody = (target) => disableBodyScroll(target);
   const enableBody = (target) => enableBodyScroll(target);
   const accentColor = ' #00C58C';
 
   return (
     <>
-      <GlobalStyle />
       <Tour
+        steps={steps}
+        onRequestClose={() => setOpen(false)}
+        isOpen={isTourOpen}
         onAfterOpen={disableBody}
         onBeforeClose={enableBody}
-        showNavigationNumber={false}
         rounded={5}
-        steps={steps}
-        isOpen={isTourOpen}
-        onRequestClose={() => setIsTourOpen(false)}
-        showNumber={false}
-        closeWithMask={false}
         className='helper'
         accentColor={accentColor}
-        CustomHelper={MyCustomHelper}
+        showNavigationNumber={false}
+        showNumber={false}
       />
     </>
   );
 };
-
-function MyCustomHelper({ current, content, totalSteps, gotoStep, close }) {
-  return (
-    <main className='CustomHelper__wrapper'>
-      <div className='CustomHelper__content'>
-        {content}
-        <Controls
-          data-tour-elem='controls'
-          className='CustomHelper__controls'
-          style={{
-            marginBottom: '40px',
-            marginTop: '20px ',
-            display: 'unset',
-          }}>
-          <ButtonHelper
-            className='prev-button'
-            prev='true'
-            onClick={() => gotoStep(current - 1)}
-            disabled={current === 0}>
-            Prev
-          </ButtonHelper>
-          <Navigation
-            data-tour-elem='navigation'
-            className='navigation'
-            style={{
-              justifyContent: 'unset',
-            }}>
-            {Array.from(Array(totalSteps).keys()).map((li, i) => (
-              <Dot
-                key={li}
-                onClick={() => current !== i && gotoStep(i)}
-                current={current}
-                index={i}
-                disabled={current === i}
-                showNumber={true}
-                data-tour-elem='dot'
-              />
-            ))}
-          </Navigation>
-          <ButtonHelper
-            onClick={() => gotoStep(current + 1)}
-            disabled={current === totalSteps - 1}
-            className='next-button'
-            inverted>
-            Next
-          </ButtonHelper>
-        </Controls>
-        <Close onClick={close} className='reactour__close'>
-          Skip
-        </Close>
-      </div>
-    </main>
-  );
-}
 
 const steps = [
   {
@@ -105,7 +45,7 @@ const steps = [
       );
     },
     position: [1000, 490],
-    style: {},
+    style: { color: '#F1F3FF', backgroundColor: '#252A42', minWidth: '380px' },
   },
   {
     selector: '[data-tour="time-zone"]',
@@ -121,7 +61,7 @@ const steps = [
       );
     },
     position: [800, 455],
-    style: {},
+    style: { color: '#F1F3FF', backgroundColor: '#252A42', minWidth: '380px' },
   },
   {
     selector: '[data-tour="end-time"]',
